@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.android.fade.extension.loadingImage
 import com.glow.user.ui.fragment.booking_list.BookingListFragment
 import com.glow.user.ui.fragment.chat_list.ChatMessageFragment
-import com.android.fade.ui.fragment.dashboard.HomeFragment
+import com.glow.user.ui.fragment.dashboard.HomeFragment
 import com.glow.user.ui.fragment.favourite_list.FavouriteFragment
 import com.glow.user.ui.fragment.profile.ProfileFragment
 import com.glow.user.utils.Constants

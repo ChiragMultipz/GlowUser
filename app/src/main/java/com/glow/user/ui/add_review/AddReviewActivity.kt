@@ -26,6 +26,7 @@ import com.android.fade.utils.Utils.snackbar
 import com.android.fade.utils.Utils.toast
 import com.glow.user.R
 import com.glow.user.databinding.ActivityAddReviewBinding
+import com.glow.user.ui.add_review.AddReviewViewModelFactory
 import com.glow.user.utils.FileUtil
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.theartofdev.edmodo.cropper.CropImage
@@ -69,7 +70,7 @@ class AddReviewActivity : AppCompatActivity(), View.OnClickListener {
                     )
                 )
             )
-        ).get(AddReviewViewModel::class.java)
+        )[AddReviewViewModel::class.java]
 
         binding.imageRecyclerView.layoutManager = LinearLayoutManager(
             this,

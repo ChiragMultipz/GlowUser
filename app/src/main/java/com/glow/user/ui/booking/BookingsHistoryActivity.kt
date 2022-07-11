@@ -19,6 +19,7 @@ import com.android.fade.utils.Prefrences
 import com.android.fade.utils.Utils
 import com.android.fade.utils.Utils.hide
 import com.glow.user.databinding.ActivityBookingsBinding
+import com.glow.user.ui.booking.BookingHistoryViewModelFactory
 import kotlinx.coroutines.launch
 
 class BookingsHistoryActivity : AppCompatActivity(), View.OnClickListener {

@@ -12,6 +12,13 @@ class CodeVerifyRepository constructor(private val api : MyApi) : BaseRepository
         api.login(mobile)
     }
 
+    suspend fun loginUserOtpVerify(
+        email: String,
+        otp: Int
+    ) = safeApiCall {
+        api.loginUserOtpVerify(email,otp)
+    }
+
     /*suspend fun updateProfileWithoutPhoto(
         uid: String,
         params: Map<String,String>

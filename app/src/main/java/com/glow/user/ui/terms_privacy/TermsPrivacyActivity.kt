@@ -13,6 +13,7 @@ import com.android.fade.extension.visible
 import com.android.fade.network.MyApi
 import com.android.fade.network.Resource
 import com.android.fade.utils.Utils
+import com.glow.user.ui.terms_privacy.TermsPrivacyViewModelFactory
 import kotlinx.coroutines.launch
 
 class TermsPrivacyActivity : AppCompatActivity(), View.OnClickListener {

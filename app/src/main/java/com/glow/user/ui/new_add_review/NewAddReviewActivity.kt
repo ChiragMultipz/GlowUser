@@ -25,7 +25,6 @@ import com.android.fade.ui.add_review.ImageAdapter
 import com.android.fade.ui.chat.ChatActivity
 import com.android.fade.ui.new_add_review.NewAddReviewRepository
 import com.android.fade.ui.new_add_review.NewAddReviewViewModel
-import com.android.fade.ui.new_add_review.NewAddReviewViewModelFactory
 import com.glow.user.utils.Constants
 import com.android.fade.utils.Prefrences
 import com.android.fade.utils.Utils

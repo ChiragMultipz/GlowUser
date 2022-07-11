@@ -15,7 +15,7 @@ data class Result(
 	val gender: String? = "",
 	val latitude: String? = "",
 	val latest_latitude: String? = "",
-	val mobile: Long? = 0,
+	val mobile: String? = "",
 	val latest_longitude: String? = "",
 	val profile_approved: Int? = 0,
 	val token: String? = "",

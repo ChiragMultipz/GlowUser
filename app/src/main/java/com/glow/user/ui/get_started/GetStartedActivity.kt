@@ -7,6 +7,7 @@ import com.glow.user.R
 import com.glow.user.databinding.ActivityGetStartedBinding
 import com.glow.user.ui.login.LoginActivity
 import com.android.fade.ui.terms_privacy.TermsPrivacyActivity
+import com.glow.user.ui.login_with_email.EmailLoginActivity
 
 class GetStartedActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -42,6 +43,6 @@ class GetStartedActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun goToLoginScreen() {
         finish()
-        startActivity(Intent(this, LoginActivity::class.java))
+        startActivity(Intent(this, EmailLoginActivity::class.java))
     }
 }

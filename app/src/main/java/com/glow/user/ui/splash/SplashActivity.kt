@@ -1,4 +1,4 @@
-package com.android.fade.ui.splash
+package com.glow.user.ui.splash
 
 import android.Manifest
 import android.content.Intent
@@ -8,11 +8,11 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.glow.user.MainActivity
 import com.glow.user.R
-import com.android.fade.ui.get_started.GetStartedActivity
 import com.glow.user.utils.Constants
 import com.android.fade.utils.ManagePermissions
 import com.android.fade.utils.Prefrences
 import com.android.fade.utils.Utils.toast
+import com.glow.user.ui.get_started_new.GetStartedNewActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -52,7 +52,7 @@ class SplashActivity : AppCompatActivity() {
         } else {
             if (managePermissions.checkPermissions()) {
                 Handler().postDelayed({
-                    val intent = Intent(this, GetStartedActivity::class.java)
+                    val intent = Intent(this, GetStartedNewActivity::class.java)
                     startActivity(intent)
                     finish()
                 }, 2000)
@@ -84,7 +84,7 @@ class SplashActivity : AppCompatActivity() {
                     } else {
 
                         Handler().postDelayed({
-                            val intent = Intent(this, GetStartedActivity::class.java)
+                            val intent = Intent(this, GetStartedNewActivity::class.java)
                             startActivity(intent)
                             finish()
                         }, 2000)

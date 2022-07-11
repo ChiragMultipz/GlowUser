@@ -21,6 +21,7 @@ import com.android.fade.utils.Prefrences
 import com.android.fade.utils.Utils
 import com.android.fade.utils.Utils.snackbar
 import com.glow.user.databinding.ActivityAppointmentsBinding
+import com.glow.user.ui.appointment.AppointmentViewModelFactory
 import com.prolificinteractive.materialcalendarview.CalendarDay
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView
 import com.prolificinteractive.materialcalendarview.OnDateSelectedListener

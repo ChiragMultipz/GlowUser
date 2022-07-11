@@ -28,7 +28,7 @@ import com.android.fade.ui.get_location.DirectionPointListener
 import com.android.fade.ui.get_location.GetPathFromLocation
 import com.android.fade.ui.new_add_review.NewAddReviewRepository
 import com.android.fade.ui.new_add_review.NewAddReviewViewModel
-import com.android.fade.ui.new_add_review.NewAddReviewViewModelFactory
+import com.glow.user.ui.new_add_review.NewAddReviewViewModelFactory
 import com.android.fade.ui.search_place.AutoCompleteAdapter
 import com.glow.user.utils.Constants
 import com.android.fade.utils.ManagePermissions

@@ -17,6 +17,7 @@ import com.glow.user.utils.Constants
 import com.android.fade.utils.Prefrences
 import com.android.fade.utils.Utils
 import com.android.fade.utils.Utils.hide
+import com.glow.user.ui.review.ReviewModelFactory
 import kotlinx.coroutines.launch
 
 class ReviewsActivity : AppCompatActivity(), View.OnClickListener {

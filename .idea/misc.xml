@@ -6,6 +6,7 @@
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/drawable-hdpi/drawable_otp_selector.xml" value="0.1" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/drawable/drawable_add_service_btn_black_bg.xml" value="0.205" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/drawable/drawable_add_service_btn_grey_bg.xml" value="0.205" />
+        <entry key="..\:/Android Learn/GlowUser/app/src/main/res/drawable/drawable_airdrop_text_bg.xml" value="0.2215" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/drawable/drawable_black_rounded_corner_bg.xml" value="0.211" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/drawable/drawable_cancelled_order_text_border.xml" value="0.1" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/drawable/drawable_circle_ofline.xml" value="0.1" />
@@ -30,9 +31,11 @@
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/activity_chat.xml" value="0.32472826086956524" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/activity_code_verify.xml" value="0.25" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/activity_current_location.xml" value="0.32472826086956524" />
+        <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/activity_email_login.xml" value="0.3333333333333333" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/activity_enter_address.xml" value="0.32472826086956524" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/activity_get_location.xml" value="0.1" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/activity_get_started.xml" value="0.25" />
+        <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/activity_get_started_new.xml" value="0.3333333333333333" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/activity_maps.xml" value="0.32472826086956524" />
@@ -64,7 +67,7 @@
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/fragment_favourite.xml" value="0.32472826086956524" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/fragment_home.xml" value="0.32472826086956524" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/fragment_maps.xml" value="0.32472826086956524" />
-        <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/fragment_new_dash_board.xml" value="0.1" />
+        <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/fragment_new_dash_board.xml" value="0.25" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/item_barber_near_me.xml" value="0.32472826086956524" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/item_barber_pricing.xml" value="0.32472826086956524" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/item_barber_services.xml" value="0.32472826086956524" />
@@ -83,6 +86,7 @@
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/item_spinner.xml" value="0.3333333333333333" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/layout_bottom_filter_sheet.xml" value="0.32472826086956524" />
         <entry key="..\:/Android Learn/GlowUser/app/src/main/res/layout/profile_fragment.xml" value="0.25" />
+        <entry key="..\:/Android Learn/GlowUser/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2215" />
       </map>
     </option>
   </component>

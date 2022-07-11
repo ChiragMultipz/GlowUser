@@ -1,4 +1,4 @@
-package com.android.fade.ui.fragment.dashboard
+package com.glow.user.ui.fragment.dashboard
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -41,6 +41,10 @@ import com.android.fade.network.MyApi
 import com.android.fade.network.Resource
 import com.android.fade.ui.appointment.AppointmentsActivity
 import com.android.fade.ui.base.BaseFragment
+import com.android.fade.ui.fragment.dashboard.HomeRepository
+import com.android.fade.ui.fragment.dashboard.HomeViewModel
+import com.android.fade.ui.fragment.dashboard.Offer
+import com.android.fade.ui.fragment.dashboard.ResultItem
 import com.android.fade.ui.notification.NotificationActivity
 import com.android.fade.ui.review.ReviewsActivity
 import com.android.fade.ui.search_place.AutoCompleteAdapter
@@ -124,7 +128,7 @@ class HomeFragment() : BaseFragment<HomeViewModel, FragmentHomeBinding, HomeRepo
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_map_truck_pin))
             )
             binding.relMap.visibility = View.VISIBLE
-            googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(context, R.raw.style_map))
+            googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(requireContext(), R.raw.style_map))
             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(driverLatLon, 14F))
         }
 

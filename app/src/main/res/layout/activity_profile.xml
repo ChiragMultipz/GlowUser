@@ -185,6 +185,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_16sdp"
+                    android:visibility="gone"
                     android:background="@drawable/drawable_rounded_corner_border_black"
                     android:padding="@dimen/_2sdp">
 

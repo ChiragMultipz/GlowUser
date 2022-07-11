@@ -18,7 +18,6 @@ import com.android.fade.network.MyApi
 import com.android.fade.network.Resource
 import com.android.fade.ui.code_verify.CodeVerifyRepository
 import com.android.fade.ui.code_verify.CodeVerifyViewModel
-import com.android.fade.ui.code_verify.CodeVerifyViewModelFactory
 import com.glow.user.ui.profile.ProfileActivity
 import com.android.fade.ui.profile.Result
 import com.glow.user.utils.Constants
@@ -45,6 +44,10 @@ class CodeVerifyActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityCodeVerifyBinding
     private lateinit var viewModel: CodeVerifyViewModel
     private var mobileNumber: String? = null
+    private var isEmailLogin: Boolean = false
+    //    private var selectedCountry: LoginActivity.SelectedCountry? = null
+    private var userEmail: String = ""
+    private var otp: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCodeVerifyBinding.inflate(layoutInflater)
@@ -55,11 +58,36 @@ class CodeVerifyActivity : AppCompatActivity(), View.OnClickListener {
         ).get(CodeVerifyViewModel::class.java)
         binding.otpView.requestFocus()
         mobileNumber = intent.getStringExtra(Constants.USER_MOBILE_NO)
+        isEmailLogin = intent.getBooleanExtra(Constants.IS_EMAIL_LOGIN, false)
+        if (!isEmailLogin) {
+            /*mobileNumber = intent.getStringExtra(Constants.USER_MOBILE_NO)
+            selectedCountry =
+                intent.getSerializableExtra(Constants.SelectedCountry) as LoginActivity.SelectedCountry
+
+            Prefrences.savePreferencesString(
+                this@CodeVerifyActivity,
+                Constants.PREFS_CODE,
+                selectedCountry!!.selectedCountryId!!
+            )
+
+            Prefrences.savePreferencesString(
+                this@CodeVerifyActivity,
+                Constants.SELECTED_COUNTRY_CODE,
+                selectedCountry!!.selectedCountryCode!!
+            )*/
+        } else {
+            userEmail = intent.getStringExtra(Constants.EMAIL_ID)!!
+            otp = intent.getStringExtra(Constants.OTP)!!
+        }
         setUpFirebase()
-        sendOtp()
+        if (isEmailLogin) {
+
+        } else {
+            sendOtp()
+        }
         setOnClickListener()
-        binding.otpView.enable(false)
-        binding.progressBar.visibility = View.VISIBLE
+        binding.otpView.enable(true)
+        binding.progressBar.visibility = View.GONE
 
         viewModel.loginResponse.observe(this, androidx.lifecycle.Observer {
             binding.progressBar.visible(it is Resource.Loading)
@@ -76,7 +104,7 @@ class CodeVerifyActivity : AppCompatActivity(), View.OnClickListener {
                                     startActivity(intent)
                                     finish()
                                 } else {
-                                    savePreferences(it.value.result!!)
+                                    savePreferences(it.value.result)
                                     var intent = Intent(this, MainActivity::class.java)
                                     intent.flags =
                                         Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -114,6 +142,35 @@ class CodeVerifyActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
         })
+
+
+        // Login with email response handler
+
+        viewModel.emailLoginResponse.observe(this) {
+            binding.progressBar.visible(it is Resource.Loading)
+            when (it) {
+                is Resource.Success -> {
+                    binding.progressBar.hide()
+                    if (it.value.success!!) {
+                        if (it.value.result != null) {
+                            savePreferences(it.value.result)
+                            var intent = Intent(this, MainActivity::class.java)
+                            intent.flags =
+                                Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            startActivity(intent)
+                            finish()
+                        }
+
+                    } else {
+                        ToastUtil.showToast(it.value.message!!)
+                    }
+
+                }
+                is Resource.Failure -> {
+                    Utils.handleApiError(binding.root, it)
+                }
+            }
+        }
 
     }
 
@@ -293,13 +350,27 @@ class CodeVerifyActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun verifyVerificationCode(code: String) {
-        if (code == null) return
-        if (mVerificationId == null) return
-        if (code == "" || mVerificationId == "") return
-        //creating the credential
-        val credential = PhoneAuthProvider.getCredential(mVerificationId, code)
-        //signing the user
-        signInWithPhoneAuthCredential(credential)
+
+        if (isEmailLogin) {
+
+            if(otp == code){
+                viewModel.viewModelScope.launch {
+                    viewModel.loginUserOtpVerify(userEmail, otp.toInt())
+                }
+            } else {
+                ToastUtil.showToast("OTP Verification Failed!")
+            }
+
+        } else {
+            if (code == null) return
+            if (mVerificationId == null) return
+            if (code == "" || mVerificationId == "") return
+            //creating the credential
+            val credential = PhoneAuthProvider.getCredential(mVerificationId, code)
+            //signing the user
+            signInWithPhoneAuthCredential(credential)
+        }
+
     }
 
     override fun onClick(v: View?) {

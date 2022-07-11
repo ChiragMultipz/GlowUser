@@ -14,7 +14,6 @@ import android.view.Window
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.lifecycle.viewModelScope
-import com.glow.user.R
 import com.android.fade.extension.loadingImage
 import com.android.fade.extension.visible
 import com.android.fade.network.MyApi
@@ -25,19 +24,19 @@ import com.android.fade.ui.chat.ChatActivity
 import com.android.fade.ui.fragment.dashboard.Offer
 import com.android.fade.ui.fragment.profile.ProfileFragmentRepository
 import com.android.fade.ui.fragment.profile.ProfileViewModel
-import com.glow.user.ui.login.LoginActivity
 import com.android.fade.ui.notification.NotificationActivity
 import com.android.fade.ui.payment_history.PaymentHistoryActivity
-import com.glow.user.ui.profile.ProfileActivity
-import com.glow.user.utils.Constants
 import com.android.fade.utils.Prefrences
 import com.android.fade.utils.Utils
 import com.android.fade.utils.Utils.hide
 import com.android.fade.utils.Utils.snackbar
 import com.glow.user.BuildConfig
+import com.glow.user.R
 import com.glow.user.databinding.ProfileFragmentBinding
+import com.glow.user.ui.login_with_email.EmailLoginActivity
+import com.glow.user.ui.profile.ProfileActivity
+import com.glow.user.utils.Constants
 import kotlinx.coroutines.launch
-import java.util.*
 
 class ProfileFragment :
     BaseFragment<ProfileViewModel, ProfileFragmentBinding, ProfileFragmentRepository>(),
@@ -81,7 +80,7 @@ class ProfileFragment :
                     binding.progressBar.hide()
                     if (it.value.success!!) {
                         Prefrences.clearPreferences(requireContext())
-                        val intent = Intent(requireContext(), LoginActivity::class.java)
+                        val intent = Intent(requireContext(), EmailLoginActivity::class.java)
                         intent.flags =
                             Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         startActivity(intent)

@@ -14,10 +14,22 @@ class CodeVerifyViewModel constructor(private val repository: CodeVerifyReposito
     val loginResponse: LiveData<Resource<ProfileResponse>>
         get() = _loginResponse
 
+    private val _emailLoginResponse: MutableLiveData<Resource<ProfileResponse>> = MutableLiveData()
+    val emailLoginResponse: LiveData<Resource<ProfileResponse>>
+        get() = _emailLoginResponse
+
     suspend fun login(
         mobile: String
     ) = viewModelScope.launch {
         _loginResponse.value = Resource.Loading
         _loginResponse.value = repository.login(mobile)
+    }
+
+    suspend fun loginUserOtpVerify(
+        email: String,
+        otp: Int
+    ) = viewModelScope.launch {
+        _emailLoginResponse.value = Resource.Loading
+        _emailLoginResponse.value = repository.loginUserOtpVerify(email,otp)
     }
 }

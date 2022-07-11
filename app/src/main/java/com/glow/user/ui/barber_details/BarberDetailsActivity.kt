@@ -27,6 +27,7 @@ import com.android.fade.utils.Utils.enable
 import com.android.fade.utils.Utils.hide
 import com.android.fade.utils.Utils.snackbar
 import com.glow.user.databinding.ActivityBarberDetailsBinding
+import com.glow.user.ui.barber_details.BarberDetailsViewModelFactory
 import gun0912.tedimagepicker.util.ToastUtil.context
 import kotlinx.coroutines.launch
 import java.util.*

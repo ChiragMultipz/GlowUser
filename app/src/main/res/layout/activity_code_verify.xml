@@ -75,6 +75,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_32sdp"
         android:padding="@dimen/_2sdp"
+        android:visibility="gone"
         android:text="@string/didn_t_you_received_any_code"
         android:textSize="@dimen/_14sdp" />
 
@@ -86,6 +87,7 @@
         android:layout_marginTop="@dimen/_32sdp"
         android:padding="@dimen/_2sdp"
         android:text="@string/resend_code"
+        android:visibility="gone"
         android:textSize="@dimen/_14sdp" />
 
     <View
@@ -93,6 +95,7 @@
         android:layout_height="1dp"
         android:layout_below="@+id/tvResendOtp"
         android:layout_alignStart="@+id/tvResendOtp"
+        android:visibility="gone"
         android:layout_alignEnd="@+id/tvResendOtp"
         android:background="@color/app_black" />
 

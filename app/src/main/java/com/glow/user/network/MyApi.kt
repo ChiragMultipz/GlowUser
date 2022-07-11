@@ -19,6 +19,7 @@ import com.android.fade.ui.profile.ProfileResponse
 import com.android.fade.ui.review.ReviewResponse
 import com.android.fade.ui.select_service.ServicesResponse
 import com.android.fade.ui.terms_privacy.TermsPrivacyResponse
+import com.glow.user.ui.login_with_email.UserLoginResponse
 import com.glow.user.utils.Constants
 import com.google.gson.GsonBuilder
 import okhttp3.MultipartBody
@@ -56,10 +57,21 @@ interface MyApi {
     suspend fun login(@Field("mobile") mobile: String): ProfileResponse
 
     @FormUrlEncoded
+    @POST("loginUserOtpVerify")
+    suspend fun loginUserOtpVerify(
+        @Field("email") mobile: String,
+        @Field("otp") otp: Int
+    ): ProfileResponse
+
+    @FormUrlEncoded
     @POST("addDeviceIdAndToken")
     suspend fun getDashBoardData(
         @FieldMap params: Map<String, String>
     ): NewDashBoardResponseModel
+
+    @FormUrlEncoded
+    @POST("loginUser")
+    suspend fun loginUser(@Field("email") mobile: String): UserLoginResponse
 
     @FormUrlEncoded
     @POST("getNearByBarberByLocations")

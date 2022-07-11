@@ -28,7 +28,6 @@ import com.android.fade.network.MyApi
 import com.android.fade.network.Resource
 import com.glow.user.ui.get_location.GetLocationActivity
 import com.android.fade.ui.profile.ProfileRepository
-import com.android.fade.ui.profile.ProfileViewModelFactory
 import com.android.fade.ui.profile.Result
 import com.android.fade.utils.*
 import com.android.fade.utils.Utils.handleApiError
