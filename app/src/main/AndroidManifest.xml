@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.glow.user">
+    package="com.youbook.glow">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -18,8 +18,8 @@
     </queries>
 
     <application
-        android:name=".MyApp"
-        android:allowBackup="true"
+        android:name="com.youbook.glow.MyApp"
+        android:allowBackup="false"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -30,11 +30,11 @@
         android:theme="@style/Theme.Fade"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.login_with_email.EmailLoginActivity"
+            android:name="com.youbook.glow.ui.login_with_email.EmailLoginActivity"
             android:exported="false" />
 
         <activity
-            android:name=".ui.get_started_new.GetStartedNewActivity"
+            android:name="com.youbook.glow.ui.get_started_new.GetStartedNewActivity"
             android:exported="false" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -49,12 +49,12 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".ui.MapsActivity"
+            android:name="com.youbook.glow.ui.MapsActivity"
             android:label="@string/title_activity_maps"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.enter_address_manually.EnterAddressActivity"
+            android:name="com.youbook.glow.ui.enter_address_manually.EnterAddressActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -62,7 +62,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.use_current_location.CurrentLocationActivity"
+            android:name="com.youbook.glow.ui.use_current_location.CurrentLocationActivity"
             android:screenOrientation="portrait"
             android:exported="false"
             android:windowSoftInputMode="stateHidden|adjustResize" />
@@ -71,7 +71,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.new_add_review.NewAddReviewActivity"
+            android:name="com.youbook.glow.ui.new_add_review.NewAddReviewActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -87,7 +87,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.get_location.GetLocationActivity"
+            android:name="com.youbook.glow.ui.get_location.GetLocationActivity"
             android:label="@string/title_activity_get_location"
             android:exported="false"
             android:screenOrientation="portrait" />
@@ -117,7 +117,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.select_service.SelectServiceActivity"
+            android:name="com.youbook.glow.ui.select_service.SelectServiceActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -133,7 +133,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.profile.ProfileActivity"
+            android:name="com.youbook.glow.ui.profile.ProfileActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -141,7 +141,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.code_verify.CodeVerifyActivity"
+            android:name="com.youbook.glow.ui.code_verify.CodeVerifyActivity"
             android:screenOrientation="portrait"
             android:exported="false"
             android:theme="@style/TransparentStatusBar" />
@@ -151,13 +151,13 @@
             android:exported="false"
             android:theme="@style/TransparentStatusBar" />
         <activity
-            android:name=".ui.login.LoginActivity"
+            android:name="com.youbook.glow.ui.login.LoginActivity"
             android:screenOrientation="portrait"
             android:exported="false"
             android:theme="@style/TransparentStatusBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name="com.youbook.glow.ui.splash.SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/TransparentStatusBar">
@@ -187,7 +187,7 @@
         </provider>
         -->
         <activity
-            android:name=".MainActivity"
+            android:name="com.youbook.glow.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
